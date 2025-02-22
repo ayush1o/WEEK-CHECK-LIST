@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>7-Day Coding Challenge Checklist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f5f5f5;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .day-container {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .task {
+      margin-bottom: 8px;
+    }
+    .progress-container {
+      margin-top: 10px;
+    }
+    .progress-wrapper {
+      width: 100%;
+      background: #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .progress-bar {
+      height: 20px;
+      background: #4caf50;
+      width: 0%;
+      border-radius: 4px;
+      text-align: center;
+      color: white;
+      line-height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>7-Day Coding Challenge Checklist</h1>
+
+  <!-- Overall Progress -->
+  <div id="overallProgressContainer">
+    <h2>Overall Progress: <span id="overallProgressText">0%</span></h2>
+    <div class="progress-wrapper">
+      <div id="overallProgressBar" class="progress-bar"></div>
+    </div>
+  </div>
+
+  <div id="daysContainer">
+    <!-- Day 1 -->
+    <div class="day-container" data-day-total="24">
+      <h2>Day 1: Arrays &amp; Hashing, Two Pointers, Stack, etc.</h2>
+      <div class="tasks">
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="2" onchange="updateProgress()"> 
+          <strong>6:00 AM - 8:00 AM</strong> → Arrays &amp; Hashing – Learn concepts + 5-7 problems (2 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>8:00 AM - 9:00 AM</strong> → Breakfast &amp; short break (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="2" onchange="updateProgress()"> 
+          <strong>9:00 AM - 11:00 AM</strong> → Two Pointers – Learn &amp; solve 5-7 problems (2 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>11:00 AM - 12:00 PM</strong> → Stack – Learn &amp; solve 5 problems (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>12:00 PM - 1:00 PM</strong> → Lunch &amp; relaxation (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="2" onchange="updateProgress()"> 
+          <strong>1:00 PM - 3:00 PM</strong> → Sliding Window – Learn &amp; solve 5 problems (2 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="2" onchange="updateProgress()"> 
+          <strong>3:00 PM - 5:00 PM</strong> → Linked List – Learn &amp; solve 5-7 problems (2 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>5:00 PM - 6:00 PM</strong> → Exercise/Short Walk (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>6:00 PM - 9:00 PM</strong> → Binary Search – Learn &amp; solve 7 problems (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>9:00 PM - 10:00 PM</strong> → Dinner (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="2" onchange="updateProgress()"> 
+          <strong>10:00 PM - 12:00 AM</strong> → Revision &amp; Mock Problems (2 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="6" onchange="updateProgress()"> 
+          <strong>12:00 AM - 6:00 AM</strong> → Sleep (6 hrs)
+        </div>
+      </div>
+      <div class="progress-container">
+        <strong>Day 1 Progress: <span class="day-progress-text">0%</span></strong>
+        <div class="progress-wrapper">
+          <div class="day-progress-bar progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-container" data-day-total="24">
+      <h2>Day 2: Trees &amp; Tries</h2>
+      <div class="tasks">
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>6:00 AM - 9:00 AM</strong> → Binary Trees (Traversals, DFS, BFS) + 5-7 problems (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>9:00 AM - 10:00 AM</strong> → Breakfast (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>10:00 AM - 1:00 PM</strong> → BST (Binary Search Trees) + 5-7 problems (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>1:00 PM - 2:00 PM</strong> → Lunch (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>2:00 PM - 5:00 PM</strong> → Tries + 5-7 problems (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>5:00 PM - 6:00 PM</strong> → Short Walk (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>6:00 PM - 9:00 PM</strong> → Mock Problems (Trees &amp; Tries) (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>9:00 PM - 10:00 PM</strong> → Dinner (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="2" onchange="updateProgress()"> 
+          <strong>10:00 PM - 12:00 AM</strong> → Revision &amp; Problem Solving (2 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="6" onchange="updateProgress()"> 
+          <strong>12:00 AM - 6:00 AM</strong> → Sleep (6 hrs)
+        </div>
+      </div>
+      <div class="progress-container">
+        <strong>Day 2 Progress: <span class="day-progress-text">0%</span></strong>
+        <div class="progress-wrapper">
+          <div class="day-progress-bar progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-container" data-day-total="24">
+      <h2>Day 3: Heap, Greedy &amp; Intervals</h2>
+      <div class="tasks">
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>6:00 AM - 9:00 AM</strong> → Heap / Priority Queue + 5-7 problems (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>9:00 AM - 10:00 AM</strong> → Breakfast (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>10:00 AM - 1:00 PM</strong> → Intervals + 5-7 problems (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>1:00 PM - 2:00 PM</strong> → Lunch (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>2:00 PM - 5:00 PM</strong> → Greedy Algorithms + 7 problems (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>5:00 PM - 6:00 PM</strong> → Short Walk (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>6:00 PM - 9:00 PM</strong> → Mock Problems (Heap, Greedy, Intervals) (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>9:00 PM - 10:00 PM</strong> → Dinner (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="2" onchange="updateProgress()"> 
+          <strong>10:00 PM - 12:00 AM</strong> → Revision &amp; Problem Solving (2 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="6" onchange="updateProgress()"> 
+          <strong>12:00 AM - 6:00 AM</strong> → Sleep (6 hrs)
+        </div>
+      </div>
+      <div class="progress-container">
+        <strong>Day 3 Progress: <span class="day-progress-text">0%</span></strong>
+        <div class="progress-wrapper">
+          <div class="day-progress-bar progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day-container" data-day-total="24">
+      <h2>Day 4: Backtracking &amp; Graphs</h2>
+      <div class="tasks">
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>6:00 AM - 9:00 AM</strong> → Backtracking + 5-7 problems (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>9:00 AM - 10:00 AM</strong> → Breakfast (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>10:00 AM - 1:00 PM</strong> → Graph Basics (BFS, DFS, Dijkstra, Floyd-Warshall) (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>1:00 PM - 2:00 PM</strong> → Lunch (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>2:00 PM - 5:00 PM</strong> → Graph Problems (5-7 problems) (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>5:00 PM - 6:00 PM</strong> → Short Walk (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>6:00 PM - 9:00 PM</strong> → Mock Problems (Backtracking &amp; Graphs) (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>9:00 PM - 10:00 PM</strong> → Dinner (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="2" onchange="updateProgress()"> 
+          <strong>10:00 PM - 12:00 AM</strong> → Revision &amp; Problem Solving (2 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="6" onchange="updateProgress()"> 
+          <strong>12:00 AM - 6:00 AM</strong> → Sleep (6 hrs)
+        </div>
+      </div>
+      <div class="progress-container">
+        <strong>Day 4 Progress: <span class="day-progress-text">0%</span></strong>
+        <div class="progress-wrapper">
+          <div class="day-progress-bar progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 5 -->
+    <div class="day-container" data-day-total="24">
+      <h2>Day 5: Dynamic Programming (1D &amp; 2D)</h2>
+      <div class="tasks">
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>6:00 AM - 9:00 AM</strong> → 1D DP (Fibonacci, Coin Change, LIS, etc.) + 5-7 problems (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>9:00 AM - 10:00 AM</strong> → Breakfast (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>10:00 AM - 1:00 PM</strong> → 2D DP (Knapsack, LCS, Grid Paths, etc.) (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>1:00 PM - 2:00 PM</strong> → Lunch (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>2:00 PM - 5:00 PM</strong> → DP Problems (5-7 problems) (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>5:00 PM - 6:00 PM</strong> → Short Walk (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>6:00 PM - 9:00 PM</strong> → Mock Problems (DP) (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>9:00 PM - 10:00 PM</strong> → Dinner (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="2" onchange="updateProgress()"> 
+          <strong>10:00 PM - 12:00 AM</strong> → Revision &amp; Problem Solving (2 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="6" onchange="updateProgress()"> 
+          <strong>12:00 AM - 6:00 AM</strong> → Sleep (6 hrs)
+        </div>
+      </div>
+      <div class="progress-container">
+        <strong>Day 5 Progress: <span class="day-progress-text">0%</span></strong>
+        <div class="progress-wrapper">
+          <div class="day-progress-bar progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 6 -->
+    <div class="day-container" data-day-total="24">
+      <h2>Day 6: Bit Manipulation + Math &amp; Geometry</h2>
+      <div class="tasks">
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>6:00 AM - 9:00 AM</strong> → Bit Manipulation (XOR, AND, OR, etc.) (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>9:00 AM - 10:00 AM</strong> → Breakfast (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>10:00 AM - 1:00 PM</strong> → Math &amp; Geometry (GCD, Prime Numbers, etc.) (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>1:00 PM - 2:00 PM</strong> → Lunch (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>2:00 PM - 5:00 PM</strong> → Mock Problems (Bit Manipulation &amp; Math/Geometry) (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>5:00 PM - 6:00 PM</strong> → Short Walk (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>6:00 PM - 9:00 PM</strong> → Final Revision &amp; Mock Problems (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>9:00 PM - 10:00 PM</strong> → Dinner (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="2" onchange="updateProgress()"> 
+          <strong>10:00 PM - 12:00 AM</strong> → Revision &amp; Competitive Programming Practice (2 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="6" onchange="updateProgress()"> 
+          <strong>12:00 AM - 6:00 AM</strong> → Sleep (6 hrs)
+        </div>
+      </div>
+      <div class="progress-container">
+        <strong>Day 6 Progress: <span class="day-progress-text">0%</span></strong>
+        <div class="progress-wrapper">
+          <div class="day-progress-bar progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 7 -->
+    <div class="day-container" data-day-total="24">
+      <h2>Day 7: Mock Contests &amp; Revision</h2>
+      <div class="tasks">
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>6:00 AM - 9:00 AM</strong> → LeetCode Contest + Mock Test (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>9:00 AM - 10:00 AM</strong> → Breakfast (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>10:00 AM - 1:00 PM</strong> → Mock Test Analysis &amp; Weak Topic Revision (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>1:00 PM - 2:00 PM</strong> → Lunch (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>2:00 PM - 5:00 PM</strong> → Revising 50+ Mistakes &amp; Optimizations (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>5:00 PM - 6:00 PM</strong> → Short Walk (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="3" onchange="updateProgress()"> 
+          <strong>6:00 PM - 9:00 PM</strong> → Final Full-Length Mock Contest (3 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="1" onchange="updateProgress()"> 
+          <strong>9:00 PM - 10:00 PM</strong> → Dinner (1 hr)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="2" onchange="updateProgress()"> 
+          <strong>10:00 PM - 12:00 AM</strong> → Final Practice &amp; Reflection (2 hrs)
+        </div>
+        <div class="task">
+          <input type="checkbox" class="task-checkbox" data-duration="6" onchange="updateProgress()"> 
+          <strong>12:00 AM - 6:00 AM</strong> → Sleep (6 hrs)
+        </div>
+      </div>
+      <div class="progress-container">
+        <strong>Day 7 Progress: <span class="day-progress-text">0%</span></strong>
+        <div class="progress-wrapper">
+          <div class="day-progress-bar progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function updateProgress() {
+      let overallCompleted = 0;
+      const overallTotal = 24 * 7; // 168 total hours over 7 days
+      
+      // Loop through each day container
+      document.querySelectorAll('.day-container').forEach(function(dayContainer) {
+        let dayCompleted = 0;
+        dayContainer.querySelectorAll('.task-checkbox').forEach(function(checkbox) {
+          if (checkbox.checked) {
+            dayCompleted += parseFloat(checkbox.getAttribute('data-duration'));
+          }
+        });
+        
+        // Calculate and update the daily progress
+        let dayPercent = Math.min((dayCompleted / 24) * 100, 100);
+        dayContainer.querySelector('.day-progress-bar').style.width = dayPercent + '%';
+        dayContainer.querySelector('.day-progress-text').textContent = Math.floor(dayPercent) + '%';
+        
+        overallCompleted += dayCompleted;
+      });
+      
+      // Calculate and update the overall progress
+      let overallPercent = Math.min((overallCompleted / overallTotal) * 100, 100);
+      document.getElementById('overallProgressBar').style.width = overallPercent + '%';
+      document.getElementById('overallProgressText').textContent = Math.floor(overallPercent) + '%';
+    }
+  </script>
+</body>
+</html>
